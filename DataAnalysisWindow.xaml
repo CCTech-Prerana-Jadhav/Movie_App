@@ -1,0 +1,19 @@
+<Window x:Class="MoviesApp.DataAnalysisWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Data Analysis" Height="400" Width="600">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="2*"/>
+		</Grid.RowDefinitions>
+
+		<StackPanel Orientation="Vertical" Grid.Row="0" Margin="10">
+			<Button Content="Show Average Box Office by Genre" Click="ShowAverageBoxOfficeByGenre_Click" Margin="5"/>
+			<Button Content="Show Average Box Office by Lead Actor" Click="ShowAverageBoxOfficeByActor_Click" Margin="5"/>
+			<Button Content="Predict Future Box Office" Click="PredictBoxOffice_Click" Margin="5"/>
+		</StackPanel>
+
+		<ListBox x:Name="AnalysisResultsListBox" Grid.Row="1" Margin="10"/>
+	</Grid>
+</Window>
